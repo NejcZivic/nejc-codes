@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 1920px) {
+    .volume {
+        width: 150px !important;
+    }
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #000000;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+}
+
+body {
+    background-color: #202020;
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.loader {
+    border-top: 16px solid #00a2ff;
+}
+
+.search {
+    color: #ffffff !important;
+}
+
+.dark {
+    display: block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.content {
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.loader {
+    margin: 0 auto;
+}
+
+.songs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 150px;
+}
+
+.play {
+    background-color: #000000;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-102%);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.play:hover {
+    opacity: 0.5;
+}
+
+.song {
+    animation: appear 0.5s ease;
+}
+
+.non-view {
+    opacity: 0;
+}
+
+.search>input {
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 20px;
+    outline: none;
+}
+
+.view {
+    display: block;
+}
+
+.not-view {
+    display: none;
+}
+
+.playback {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    background-color: #202020;
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.time {
+    position: absolute;
+    width: 50%;
+    height: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    z-index: 150;
+    transform: translateY(1000%);
+}
+
+.timeBar {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: #666666fb;
+    z-index: 150;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timeBarInner {
+    position: absolute;
+    width: 0%;
+    height: 10px;
+    background-color: #ce68db;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.middlePart {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.controls {
+    position: fixed;
+    width: 15%;
+    margin-left: 42.5%;
+    margin-right: 42.5%;
+    height: 50px;
+    display: inline-flex;
+    justify-content: space-between;
+    z-index: 120;
+    transform: translateX(-135%) translateY(50%);
+}
+
+.timeText {
+    margin-top: 0;
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#timeText2 {
+    margin-top: 10px;
+    float: right;
+}
+
+#timeText {
+    margin-top: 10px;
+    float: left;
+}
+
+.pp {
+    cursor: pointer;
+}
+
+.forward {
+    cursor: pointer;
+    z-index: 120;
+}
+
+.back {
+    cursor: pointer;
+    z-index: 120;
+}
+
+.currentlyPlayingImage {
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 100;
+    margin-top: 30px;
+}
+
+.currentlyPlayingText {
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 100;
+    margin-top: 30px;
+    margin-left: 110px;
+    font-size: 20px;
+}
+
+.leftPart {
+    vertical-align: middle;
+}
+
+.info {
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.info:hover {
+    opacity: 0.7;
+}
+
+.shuffle {
+    position: fixed;
+    margin-left: 42.7%;
+    transform: translateY(45%);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.loop {
+    position: fixed;
+    transform: translateY(50%);
+    z-index: 100;
+    cursor: pointer;
+    margin-left: 15%;
+}
+
+.volumeButtons {
+    position: fixed;
+    transform: translateY(50%);
+    z-index: 100;
+    cursor: pointer;
+    margin-left: 65%;
+}
+
+.volume {
+    position: fixed;
+    width: 200px;
+    height: 50px;
+    margin-left: 70%;
+    margin-top: 78px;
+    z-index: 100;
+}
+
+.volumeBar {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: #666666fb;
+    z-index: -1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.volumeBarInner {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: #ce68db;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.settings {
+    position: absolute
+}
+
+.small {
+    font-size: 7px;
+}
+
+.smedium {
+    font-size: 10px;
+}
+
+.medium {
+    font-size: 15px;
+}
+
+.large {
+    font-size: 20px;
+}
+
+.contentS {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.size>label {
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.round {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.checked {
+    background-color: #fff;
+}
+
+.test {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.hidden-settings {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+    z-index: 1000;
+}

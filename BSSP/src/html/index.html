@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/script.js" type="module"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Beatify</title>
+</head>
+
+<body>
+    <div class="settings">
+        <img src="../imgs/settings.png" alt="settings" width="100px" id="settings">
+    </div>
+    <div class="hidden-settings" style="display: none;" id="hidden-settings">
+        <div class="settings">
+            <img src="../imgs/settings.png" alt="settings" width="100px" id="settingsS">
+        </div>
+        <div class="contentS">
+            <div class="size">
+                <h1>UI Scaling</h1>
+                <input type="checkbox" id="small" class="round">
+                <label for="small">Small</label>
+                <input type="checkbox" id="smedium" class="round">
+                <label for="smedium">Smedium</label>
+                <input type="checkbox" id="medium" class="round">
+                <label for="medium">Medium</label>
+                <input type="checkbox" id="large" class="round">
+                <label for="large">Large</label>
+
+                <div class="test">
+                    <div class="testSong" id="test">
+                        <img src="../imgs/cover.png">
+                        <div class="name">
+                            <h2>Beat Saber</h2>
+                        </div>
+                        <div class="artist">
+                            <h3>Jaroslav Beck</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="discord">
+                <h1>Discord Rich Presence Settings</h1>
+                <input type="checkbox" id="discord" class="round">
+                <label for="discord">Enabled</label>
+                <input type="checkbox" id="discord2" class="round">
+                <label for="discord2">Disabled</label>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Beatify</h1>
+        <h2 id="warning">Loading songs, this may take a while.</h2>
+        <div class="loader" id="loader"></div>
+        <div class="search">
+            <input type="text" id="search" placeholder="Search for a song or artist..." style="display: none;">
+        </div>
+    </div>
+    <div class="songs" id="songs"></div>
+    <div class="playback">
+        <div class="leftPart">
+            <div class="currentlyPlaying">
+                <div class="currentlyPlayingImage">
+                    <img src="../imgs/info.png" alt="info" width="100px" id="infoImage" class="info">
+                    <img src="../imgs/cover.png" alt="cover" width="100px" id="currentlyPlayingImage">
+                </div>
+                <div class="currentlyPlayingText">
+                    <h4 id="currentlyPlayingText">Nothing playing</h4>
+                    <h4 id="currentlyPlayingText2">Nothing playing</h4>
+                </div>
+            </div>
+        </div>
+        <div class="middlePart">
+            <div class="controls">
+                <div class="back" id="previous">
+                    <img src="../imgs/backwardW.png" class="dark" alt="back" width="45px">
+                </div>
+                <div class="pause pp" id="play">
+                    <img src="../imgs/playW.png" alt="play" width="35px" style="display: none;" id="playImage">
+                    <img src="../imgs/pauseW.png" class="dark" alt="pause" width="45px" id="pauseImage">
+                </div>
+                <div class="forward" id="next">
+                    <img src="../imgs/forwardW.png" class="dark" alt="forward" width="45px">
+                </div>
+            </div>
+            <div class="time">
+                <div class="timeBar" id="timeBar">
+                    <div class="timeBarInner" id="timeBarInner"></div>
+                </div>
+                <div class="timeText">
+                    <h4 id="timeText">0:00</h4>
+                    <h4 id="timeText2">0:00</h4>
+                </div>
+            </div>
+            <div class="loop">
+                <img src="../imgs/loop.png" alt="loop" width="60px" id="loop">
+                <img src="../imgs/loopActive.png" alt="loopActive" width="60px" id="loopActive" style="display: none;">
+            </div>
+            <div class="shuffle">
+                <img src="../imgs/shuffle.png" alt="shuffle" width="55px" id="shuffle">
+                <img src="../imgs/shuffleActive.png" alt="shuffleActive" width="55px" id="shuffleActive"
+                    style="display: none;">
+            </div>
+            <div class="volume">
+                <div id="volumeHover" style="z-index: 100;"></div>
+                <div class="volumeBar" id="volumeBar">
+                    <div class="volumeBarInner" id="volumeBarInner"></div>
+                </div>
+            </div>
+            <div class="volumeButtons">
+                <img src="../imgs/volume.png" alt="volume" width="80px" id="volume">
+                <img src="../imgs/mute.png" alt="mute" width="80px" id="mute" style="display: none;">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
