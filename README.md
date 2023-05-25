@@ -1,4 +1,4 @@
-# nejc-codes
+# Nejc Codes
 Kolekcija vseh stvari, ki sem jih do zdaj naredil.
 
 # BSSP
